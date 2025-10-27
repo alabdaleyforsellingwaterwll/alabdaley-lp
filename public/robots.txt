@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://alabdaley.shop
+
+# Sitemaps
+Sitemap: https://alabdaley.shop/sitemap.xml

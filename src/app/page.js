@@ -1,13 +1,13 @@
 'use client';
 
 import { useState } from 'react';
-import { FaPhone, FaMapMarkerAlt, FaClock, FaTint, FaTruck, FaCheckCircle } from 'react-icons/fa';
+import { FaPhone, FaMapMarkerAlt, FaClock, FaTint, FaTruck, FaCheckCircle, FaWhatsapp } from 'react-icons/fa';
 import { MdWaterDrop, MdLocalShipping, MdVerified, MdArrowForward, MdPhone } from 'react-icons/md';
 import { HiOutlineSparkles } from 'react-icons/hi';
 
 // Enhanced Water Logo Component
 const WaterLogo = () => (
-  <img src="/logo.png" alt="Alabdaley Logo" className="flex-shrink-0 w-20 h-20 object-contain" />
+  <img src="/logo.png" alt="Alabdaley for Selling Water WLL - Water delivery truck logo in Qudaibiya, Manama" className="flex-shrink-0 w-20 h-20 object-contain" />
 );
 
 export default function Home() {
@@ -33,7 +33,7 @@ export default function Home() {
             <div className="flex items-center space-x-4">
               <WaterLogo />
               <div>
-                <h1 className="text-lg font-bold text-gray-900">ALABDALEY</h1>
+                <div className="text-lg font-bold text-gray-900">ALABDALEY</div>
                 <p className="text-xs text-blue-600 font-medium">FOR SELLING WATER W.L.L</p>
               </div>
             </div>
@@ -84,8 +84,11 @@ export default function Home() {
                 <a href="#products" className="bg-blue-200 text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-300 transition shadow-xl hover:shadow-2xl flex items-center justify-center gap-2">
                   View Products <MdArrowForward />
                 </a>
-                <a href="#contact" className="bg-blue-200 text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-300 transition shadow-xl hover:shadow-2xl flex items-center justify-center gap-2">
-                  Contact Us <FaPhone className="text-base" />
+                <a href="tel:+97339470652" className="bg-blue-200 text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-300 transition shadow-xl hover:shadow-2xl flex items-center justify-center gap-2">
+                  Call Now <FaPhone className="text-base" />
+                </a>
+                <a href="https://wa.me/97339470652" target="_blank" rel="noopener noreferrer" className="bg-green-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-600 transition shadow-xl hover:shadow-2xl flex items-center justify-center gap-2">
+                  WhatsApp <FaWhatsapp className="text-base" />
                 </a>
               </div>
               
