@@ -11,16 +11,17 @@ const WaterLogo = () => (
 );
 
 export default function Home() {
-  const [selectedCategory, setSelectedCategory] = useState('Ice Cube');
+  const [selectedCategory, setSelectedCategory] = useState('Water Can');
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const products = {
+    'Water Can': [
+      { name: 'Water Can', price: '0.100', description: 'Premium drinking water in convenient cans' },
+    ],
     'Ice Cube': [
       { name: 'Ice Cube Small', price: '0.100', description: 'Fresh, clean ice cubes perfect for daily use' },
       { name: 'Ice Cube Medium', price: '0.200', description: 'Medium size ice cubes for refreshment' },
       { name: 'Ice Cube Large', price: '0.300', description: 'Large ice cubes for parties and events' },
-    ],
-    'Water Can': [
-      { name: 'Water Can', price: '0.100', description: 'Premium drinking water in convenient cans' },
     ]
   };
 
@@ -47,12 +48,81 @@ export default function Home() {
                 <MdPhone /> +973 3947 0652
               </a>
             </div>
-            <button className="md:hidden p-2 text-gray-700">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
+            <button 
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="md:hidden p-2 text-gray-700"
+              aria-label="Toggle mobile menu"
+            >
+              {mobileMenuOpen ? (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
             </button>
           </div>
+          
+          {/* Mobile Menu */}
+          {mobileMenuOpen && (
+            <div className="md:hidden border-t border-gray-200 bg-white">
+              <div className="px-4 py-4 space-y-2">
+                <a 
+                  href="#hero" 
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition font-medium"
+                >
+                  Home
+                </a>
+                <a 
+                  href="#about" 
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition font-medium"
+                >
+                  About
+                </a>
+                <a 
+                  href="#services" 
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition font-medium"
+                >
+                  Services
+                </a>
+                <a 
+                  href="#products" 
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition font-medium"
+                >
+                  Products
+                </a>
+                <a 
+                  href="#contact" 
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition font-medium"
+                >
+                  Contact
+                </a>
+                <a 
+                  href="tel:+97339470652" 
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block px-4 py-3 bg-blue-200 text-blue-900 rounded-lg font-semibold hover:bg-blue-300 transition flex items-center gap-2"
+                >
+                  <MdPhone /> +973 3947 0652
+                </a>
+                <a 
+                  href="https://wa.me/97339470652" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block px-4 py-3 bg-green-500 text-white rounded-lg font-semibold hover:bg-green-600 transition flex items-center gap-2"
+                >
+                  <FaWhatsapp /> WhatsApp
+                </a>
+              </div>
+            </div>
+          )}
         </div>
       </nav>
 
