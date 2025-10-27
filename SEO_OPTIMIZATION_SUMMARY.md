@@ -58,7 +58,7 @@
 3. Update layout.js meta tags to reference it
 
 ### 4. **Update Favicon**
-1. Create favicon.ico and apple-touch-icon.png
+1. Create favicon.png and apple-touch-icon.png
 2. Add to `public/` folder
 3. Update app icons
 
